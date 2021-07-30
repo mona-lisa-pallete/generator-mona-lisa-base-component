@@ -1,0 +1,29 @@
+{
+  "name": "<%- packageName %>",
+  "version": "0.0.0-alpha.1",
+  "description": "> TODO: description",
+  "author": "<%- author %>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "esm/index.js",
+  "module": "esm/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": ["lib", "esm"],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "dev": "tsc --project ./tsconfig.build.json --watch --incremental",
+    "build": "type=h5 webpack --config ./webpack.core.config.js"
+  },
+  "devDependencies": {
+    "react": "^17.0.0",
+    "ts-loader": "^9.2.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
+}
